@@ -195,7 +195,7 @@ export default function Tab() {
 }
 
 const s = StyleSheet.create({
-  safe: { flex: 1, backgroundColor: "#0a0a1a" },
+  safe: { flex: 1, backgroundColor: "black" },
   scroll: { flex: 1 },
   scrollContent: { padding: 20 },
   titleView: { alignItems: "flex-start" },

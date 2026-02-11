@@ -31,9 +31,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="about"
+        name="swap"
         options={{
-          title: "About",
+          title: "Swap",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
               name={
