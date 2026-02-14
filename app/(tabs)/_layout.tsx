@@ -5,7 +5,6 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#14F195",
         headerStyle: {
           backgroundColor: "#25292e",
         },
@@ -13,17 +12,20 @@ export default function TabLayout() {
         headerShown: false,
         headerTintColor: "#fff",
         tabBarStyle: {
-          backgroundColor: "#25292e",
+          backgroundColor: "#16161D",
+          borderTopColor: "#2A2A35",
         },
+        tabBarActiveTintColor: "#14F195",
+        tabBarInactiveTintColor: "#6B7280",
       }}
     >
       <Tabs.Screen
         name="index"
         options={{
-          title: "Home",
+          title: "Wallet",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? "home-sharp" : "home-outline"}
+              name={focused ? "wallet-sharp" : "wallet-outline"}
               color={color}
               size={24}
             />
@@ -36,9 +38,7 @@ export default function TabLayout() {
           title: "Swap",
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={
-                focused ? "information-circle" : "information-circle-outline"
-              }
+              name={focused ? "swap-horizontal" : "swap-horizontal-outline"}
               color={color}
               size={24}
             />
