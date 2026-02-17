@@ -3,20 +3,20 @@ import { create } from "zustand";
 interface WalletStore {
   favorites: string[];
   searchHistory: string[];
-  isDevNet: boolean;
+  isDevnet: boolean;
 
   addFavorite: (address: string) => void;
   removeFavorite: (address: string) => void;
   isFavorite: (address: string) => boolean;
   addToHistory: (address: string) => void;
   clearHistory: () => void;
-  toogleNetwork: () => void;
+  toggleNetwork: () => void;
 }
 
 export const useWalletStore = create<WalletStore>((set, get) => ({
   favorites: [],
   searchHistory: [],
-  isDevNet: false,
+  isDevnet: false,
 
   addFavorite: (address) =>
     set((state) => ({
@@ -41,5 +41,5 @@ export const useWalletStore = create<WalletStore>((set, get) => ({
     })),
 
   clearHistory: () => set({ searchHistory: [] }),
-  toogleNetwork: () => set((state) => ({ isDevNet: !state.isDevNet })),
+  toggleNetwork: () => set((state) => ({ isDevnet: !state.isDevnet })),
 }));
