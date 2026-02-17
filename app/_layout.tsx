@@ -8,6 +8,7 @@ export default function RootLayout() {
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(tabs)" />
         <Stack.Screen name="token/mint" />
+        <Stack.Screen name="watchlist/watchlist" />
       </Stack>
       <StatusBar style="light" />
     </SafeAreaProvider>

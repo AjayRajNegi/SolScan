@@ -16,8 +16,8 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { FavoriteButton } from "../../src/components/FavoriteButton";
 import { useWalletStore } from "../../src/stores/wallet-store";
-//import { FavoriteButton } from "../../src/components/FavoriteButton";
 
 const short = (s: string, n = 4) => `${s.slice(0, n)}...${s.slice(-n)}`;
 
@@ -215,7 +215,7 @@ export default function WalletScreen() {
           {balance !== null && (
             <View style={s.card}>
               <View style={s.favoriteWrapper}>
-                {/* <FavoriteButton address={address.trim()} /> */}
+                <FavoriteButton address={address.trim()} />
               </View>
               <Text style={s.label}>SOL Balance</Text>
               <View style={s.balanceRow}>
